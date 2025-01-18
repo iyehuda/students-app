@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Students App</string>
+    <string name="addStudentButtonText">+</string>
 </resources>
