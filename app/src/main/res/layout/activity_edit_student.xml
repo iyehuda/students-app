@@ -70,14 +70,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:autofillHints="name"
+        android:importantForAutofill="no"
         android:inputType="text"
         android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="@+id/name_label"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/name_label"
         app:layout_constraintTop_toTopOf="@+id/name_label"
-        tools:ignore="TextContrastCheck"
+        tools:ignore="TextContrastCheck,VisualLintTextFieldSize"
         tools:text="John Doe" />
 
     <EditText
@@ -93,7 +93,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/id_label"
         app:layout_constraintTop_toTopOf="@+id/id_label"
-        tools:text="123123123" />
+        tools:text="123123123"
+        tools:ignore="VisualLintTextFieldSize" />
 
     <EditText
         android:id="@+id/phone_input"
@@ -101,14 +102,15 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:autofillHints="phone"
+        android:importantForAutofill="no"
         android:inputType="phone"
         android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="@+id/phone_label"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/phone_label"
         app:layout_constraintTop_toTopOf="@+id/phone_label"
-        tools:text="052-1234567" />
+        tools:text="052-1234567"
+        tools:ignore="VisualLintTextFieldSize" />
 
     <EditText
         android:id="@+id/address_input"
@@ -116,14 +118,15 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:autofillHints="postalAddress"
+        android:importantForAutofill="no"
         android:inputType="textPostalAddress"
         android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="@+id/address_label"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/address_label"
         app:layout_constraintTop_toTopOf="@+id/address_label"
-        tools:text="123 Main St, Springfield" />
+        tools:text="123 Main St, Springfield"
+        tools:ignore="VisualLintTextFieldSize" />
 
     <CheckBox
         android:id="@+id/check_input"
@@ -148,7 +151,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/delete_button" />
+        app:layout_constraintStart_toEndOf="@+id/delete_button"
+        tools:ignore="VisualLintButtonSize" />
 
     <Button
         android:id="@+id/delete_button"
@@ -162,7 +166,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/save_button"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/cancel_button" />
+        app:layout_constraintStart_toEndOf="@+id/cancel_button"
+        tools:ignore="VisualLintButtonSize,DuplicateSpeakableTextCheck" />
 
     <Button
         android:id="@+id/cancel_button"
@@ -176,5 +181,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/delete_button"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="VisualLintButtonSize" />
 </androidx.constraintlayout.widget.ConstraintLayout>

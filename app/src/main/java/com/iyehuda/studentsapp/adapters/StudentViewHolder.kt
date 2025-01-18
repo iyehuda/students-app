@@ -1,30 +1,11 @@
-package com.iyehuda.studentsapp
+package com.iyehuda.studentsapp.adapters
 
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.CheckBox
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-
-class StudentAdapter(private val onItemClickListener: OnItemClicked) : RecyclerView.Adapter<StudentViewHolder>() {
-    fun interface OnItemClicked {
-        fun onItemClicked(studentId: String)
-    }
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StudentViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.student_item, parent, false)
-        return StudentViewHolder(view)
-    }
-
-    override fun onBindViewHolder(holder: StudentViewHolder, position: Int) {
-        holder.bind(Model.getInstance().getStudents()[position], onItemClickListener)
-    }
-
-    override fun getItemCount(): Int {
-        return Model.getInstance().getStudentsCount()
-    }
-}
+import com.iyehuda.studentsapp.R
+import com.iyehuda.studentsapp.models.Student
 
 class StudentViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     private val name: TextView = itemView.findViewById(R.id.studentName)
