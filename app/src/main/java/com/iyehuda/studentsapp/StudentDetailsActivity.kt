@@ -23,6 +23,13 @@ class StudentDetailsActivity : AppCompatActivity() {
         }
     }
 
+    override fun onResume() {
+        super.onResume()
+        intent.getStringExtra("studentId")?.let { studentId ->
+            loadStudentDetails(studentId)
+        }
+    }
+
     private fun loadStudentDetails(studentId: String) {
         Model.getInstance().getStudentById(studentId)?.let {
             findViewById<TextView>(R.id.name_text).text = it.name
@@ -30,6 +37,8 @@ class StudentDetailsActivity : AppCompatActivity() {
             findViewById<TextView>(R.id.phone_text).text = it.phone
             findViewById<TextView>(R.id.address_text).text = it.address
             findViewById<CheckBox>(R.id.check).isChecked = it.checked
+        } ?: run {
+            finish()
         }
     }
 }

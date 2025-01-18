@@ -11,14 +11,21 @@ class EditStudentActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_edit_student)
 
-        intent.getStringExtra("studentId")?.let { studentId ->
-            loadStudentDetails(studentId)
-        } ?: run {
-            loadStudentDetails("901901901")
+        val studentId = intent.getStringExtra("studentId")
+
+        if(studentId == null) {
+            finish()
+            return
         }
+
+        loadStudentDetails(studentId)
 
         findViewById<Button>(R.id.cancel_button).setOnClickListener {
             finish()
+        }
+
+        findViewById<Button>(R.id.save_button).setOnClickListener {
+            updateStudentDetails(studentId)
         }
     }
 
@@ -30,5 +37,17 @@ class EditStudentActivity : AppCompatActivity() {
             findViewById<TextView>(R.id.address_input).text = it.address
             findViewById<CheckBox>(R.id.check_input).isChecked = it.checked
         }
+    }
+
+    private fun updateStudentDetails(studentId: String) {
+        val student = Student(
+            findViewById<TextView>(R.id.id_input).text.toString(),
+            findViewById<TextView>(R.id.name_input).text.toString(),
+            findViewById<TextView>(R.id.phone_input).text.toString(),
+            findViewById<TextView>(R.id.address_input).text.toString(),
+            findViewById<CheckBox>(R.id.check_input).isChecked
+        )
+        Model.getInstance().updateStudentById(studentId, student)
+        finish()
     }
 }
