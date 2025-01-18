@@ -7,18 +7,18 @@ import android.widget.CheckBox
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class StudentAdapter(private val students: List<Student>) : RecyclerView.Adapter<StudentViewHolder>() {
+class StudentAdapter() : RecyclerView.Adapter<StudentViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StudentViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.student_item, parent, false)
         return StudentViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: StudentViewHolder, position: Int) {
-        holder.bind(students[position])
+        holder.bind(Model.getInstance().getStudents()[position])
     }
 
     override fun getItemCount(): Int {
-        return students.size
+        return Model.getInstance().getStudentsCount()
     }
 }
 
