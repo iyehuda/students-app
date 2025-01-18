@@ -3,6 +3,7 @@
     <string name="add_student_button_text">+</string>
     <string name="save_student_button_text">Save</string>
     <string name="edit_student_button_text">Edit</string>
+    <string name="delete_student_button_text">Delete</string>
     <string name="name_label">Name</string>
     <string name="id_label">ID</string>
     <string name="phone_label">Phone</string>
