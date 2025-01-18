@@ -37,4 +37,16 @@ class Model private constructor() {
     fun getStudentById(studentId: String): Student? {
         return students.find { it.id == studentId }
     }
+
+    fun updateStudentById(studentId: String, student: Student) {
+        val index = students.indexOfFirst { it.id == studentId }
+
+        if (index != -1) {
+            students[index] = student
+        }
+    }
+
+    fun deleteStudentById(studentId: String) {
+        students.removeIf { it.id == studentId }
+    }
 }
