@@ -26,11 +26,11 @@ class StudentListActivity : AppCompatActivity() {
         setContentView(R.layout.activity_student_list)
 
         val adapter = StudentAdapter(students)
-        val studentList: RecyclerView = findViewById(R.id.studentList)
+        val studentList: RecyclerView = findViewById(R.id.student_list)
         studentList.layoutManager = LinearLayoutManager(this)
         studentList.adapter = adapter
 
-        val addStudentButton: Button = findViewById(R.id.addStudentButton)
+        val addStudentButton: Button = findViewById(R.id.add_student_button)
 
         addStudentButton.setOnClickListener {
             val intent = Intent(this, NewStudentActivity::class.java)
