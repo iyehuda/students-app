@@ -27,6 +27,10 @@ class EditStudentActivity : AppCompatActivity() {
         findViewById<Button>(R.id.save_button).setOnClickListener {
             updateStudentDetails(studentId)
         }
+
+        findViewById<Button>(R.id.delete_button).setOnClickListener {
+            deleteStudent(studentId)
+        }
     }
 
     private fun loadStudentDetails(studentId: String) {
@@ -48,6 +52,11 @@ class EditStudentActivity : AppCompatActivity() {
             findViewById<CheckBox>(R.id.check_input).isChecked
         )
         Model.getInstance().updateStudentById(studentId, student)
+        finish()
+    }
+
+    private fun deleteStudent(studentId: String) {
+        Model.getInstance().deleteStudentById(studentId)
         finish()
     }
 }

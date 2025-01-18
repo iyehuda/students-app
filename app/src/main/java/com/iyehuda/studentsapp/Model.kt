@@ -45,4 +45,8 @@ class Model private constructor() {
             students[index] = student
         }
     }
+
+    fun deleteStudentById(studentId: String) {
+        students.removeIf { it.id == studentId }
+    }
 }
