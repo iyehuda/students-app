@@ -1,4 +1,4 @@
-package com.iyehuda.studentsapp
+package com.iyehuda.studentsapp.models
 
 data class Student(
     var id: String,

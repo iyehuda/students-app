@@ -5,6 +5,8 @@ import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
+import com.iyehuda.studentsapp.models.Model
+import com.iyehuda.studentsapp.models.Student
 
 class NewStudentActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

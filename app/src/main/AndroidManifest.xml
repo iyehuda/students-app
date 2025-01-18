@@ -14,15 +14,15 @@
         tools:targetApi="31">
         <activity
             android:name=".EditStudentActivity"
-            android:exported="true"
+            android:exported="false"
             android:label="Edit Students" />
         <activity
             android:name=".StudentDetailsActivity"
-            android:exported="true"
+            android:exported="false"
             android:label="Students Details" />
         <activity
             android:name=".NewStudentActivity"
-            android:exported="true"
+            android:exported="false"
             android:label="New Students" />
         <activity
             android:name=".StudentListActivity"

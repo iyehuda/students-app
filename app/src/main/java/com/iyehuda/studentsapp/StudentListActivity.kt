@@ -6,6 +6,7 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.iyehuda.studentsapp.adapters.StudentAdapter
 
 class StudentListActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

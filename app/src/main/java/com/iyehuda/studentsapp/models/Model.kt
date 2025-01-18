@@ -1,4 +1,4 @@
-package com.iyehuda.studentsapp
+package com.iyehuda.studentsapp.models
 
 class Model private constructor() {
     companion object {
