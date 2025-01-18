@@ -7,23 +7,23 @@
     tools:context=".StudentListActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/studentList"
+        android:id="@+id/student_list"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="72dp"
-        app:layout_constraintBottom_toTopOf="@+id/addStudentButton"
+        android:layout_height="0dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/add_student_button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/addStudentButton"
+        android:id="@+id/add_student_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        android:text="@string/addStudentButtonText"
+        android:text="@string/add_student_button_text"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
