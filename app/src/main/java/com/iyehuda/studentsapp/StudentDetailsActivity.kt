@@ -1,6 +1,8 @@
 package com.iyehuda.studentsapp
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.CheckBox
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -12,6 +14,12 @@ class StudentDetailsActivity : AppCompatActivity() {
 
         intent.getStringExtra("studentId")?.let { studentId ->
             loadStudentDetails(studentId)
+
+            findViewById<Button>(R.id.edit_button).setOnClickListener {
+                val intent = Intent(this, EditStudentActivity::class.java)
+                intent.putExtra("studentId", studentId)
+                startActivity(intent)
+            }
         }
     }
 

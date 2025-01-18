@@ -15,12 +15,7 @@
         <activity
             android:name=".EditStudentActivity"
             android:exported="true"
-            android:label="Edit Students">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:label="Edit Students" />
         <activity
             android:name=".StudentDetailsActivity"
             android:exported="true"
@@ -33,7 +28,10 @@
             android:name=".StudentListActivity"
             android:exported="true"
             android:label="Students List">
-
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 
