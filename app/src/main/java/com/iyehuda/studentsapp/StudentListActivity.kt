@@ -1,6 +1,8 @@
 package com.iyehuda.studentsapp
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -27,5 +29,12 @@ class StudentListActivity : AppCompatActivity() {
         val studentList: RecyclerView = findViewById(R.id.studentList)
         studentList.layoutManager = LinearLayoutManager(this)
         studentList.adapter = adapter
+
+        val addStudentButton: Button = findViewById(R.id.addStudentButton)
+
+        addStudentButton.setOnClickListener {
+            val intent = Intent(this, NewStudentActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
